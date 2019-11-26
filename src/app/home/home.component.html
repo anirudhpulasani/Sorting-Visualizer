@@ -1,0 +1,32 @@
+<router-outlet></router-outlet>
+<a routerLink="/login">Login</a>
+<h1 >Home!</h1><button (click)="showValue(0)">Reset</button>
+<button *ngFor="let r of run | keyvalue" (click) = "showValue(r.value)">{{r.key}}</button>
+<br><br>
+<!-- {{values}} -->
+<div class="wrapper" [ngStyle]="{'grid-template-columns':'repeat('+arrLen+', 20px)'}">
+    <div *ngFor= "let value of values;" [ngStyle]="{'grid-template-rows':'repeat('+value+', 20px)'}">{{value}}
+        <div *ngFor= "let i of getNumber(value)" [ngStyle]="applyStyles(value)" class="box">
+            
+        </div>
+    </div>
+</div>
+
+<br><br><br><br><br>
+
+
+<!-- vertical view-->
+<!-- <table>
+    <tbody>
+        <tr>
+            <div class= "row" *ngFor= "let value of values; let colorIndex = index;">
+                <td class="rowHeader">{{value}}:</td>                 -->
+                            <!-- <td *ngFor= "let i of getNumber(value)" >
+                                <div [ngStyle]="applyStyles(value)" class="box"></div> -->
+                <!-- <td>
+                    <div *ngFor= "let i of getNumber(value)" [ngStyle]="applyStyles(value)" class="box"></div>
+                </td>                
+            </div>
+        </tr>
+    </tbody>
+</table> -->

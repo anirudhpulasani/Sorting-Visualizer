@@ -1,0 +1,25 @@
+.box{
+	width:10px;
+    height:10px;
+    background:#000;
+    /* display: inline-block; */
+    /* margin-left: 5px */
+}
+
+.rowHeader {
+    width:50px;
+}
+
+.row{
+    transition: all 2s;
+}
+
+
+
+
+
+/* grid css*/  
+.wrapper {
+    display: grid;
+    grid-gap: 0px;
+}
